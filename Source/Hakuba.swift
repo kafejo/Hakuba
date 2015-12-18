@@ -272,7 +272,7 @@ extension Hakuba : UITableViewDelegate {
         if let footer = self.sections.my_get(section)?.footer {
             return footer.isEnabled ? footer.height : 0
         }
-        return 0
+        return self.tableView?.style == UITableViewStyle.Grouped ? CGFloat(FLT_MIN) : 0
     }
     
     public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
