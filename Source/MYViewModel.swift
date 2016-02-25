@@ -19,6 +19,7 @@ public protocol MYViewModelDelegate : class {
 public class MYViewModel : NSObject, MYBaseViewDelegate {
     public var selectable = true
     public var height: CGFloat = 44
+    public var customHeight: CGFloat?
     public var selectionHandler: MYSelectionHandler?
     weak var delegate: MYViewModelDelegate?
     

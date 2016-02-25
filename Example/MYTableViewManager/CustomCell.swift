@@ -14,6 +14,9 @@ class CustomCellModel : MYCellModel {
     init(title: String, selectionHandler: MYSelectionHandler) {
         self.title = title
         super.init(cell: CustomCell.self, height: 40, selectionHandler: selectionHandler)
+        
+//        If you want to use fixed cell height (not UITableViewAutomaticDimension), use .customHeight
+//        self.customHeight = 180
     }
 }
 
