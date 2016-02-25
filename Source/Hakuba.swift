@@ -232,6 +232,12 @@ extension Hakuba : UITableViewDelegate {
         return 0
     }
 */
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if let cellModel = self.cellViewModelAtIndexPath(indexPath), let height = cellModel.customHeight {                return height
+        }
+        
+        return UITableViewAutomaticDimension
+    }
     
     public func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if let cellModel = self.cellViewModelAtIndexPath(indexPath) {
